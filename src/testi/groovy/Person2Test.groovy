@@ -5,7 +5,7 @@ class Person2Test {
   @Test
   void create() {
     def p = new Person('abc')
-    assert p.name == 'abc2'
+    assert p.name == 'abc'
   }
 
 }
