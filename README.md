@@ -14,3 +14,11 @@
 # Test
 
     gradle test -i
+
+# Run groovy
+
+    groovy -cp lib/dog-1.0.jar:build/libs/gradle-best.jar main.groovy
+
+# Run groovy by java
+
+    java -cp build/libs/gradle-best.jar:lib/* groovy.ui.GroovyMain main.groovy
