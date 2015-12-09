@@ -33,3 +33,8 @@ task testi(type: Test) {
   //  events "passed", "skipped", "failed"
   //}
 }
+
+task getDeps(type: Copy) {
+  from sourceSets.main.runtimeClasspath
+  into 'lib/'
+}
