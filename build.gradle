@@ -9,3 +9,27 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.4.4'
     testCompile 'junit:junit:4.12'
 }
+
+// for integration test
+configurations {
+  testiCompile.extendsFrom testCompile
+  testiRuntime.extendsFrom testRuntime
+}
+
+sourceSets {
+  testi {
+    compileClasspath += main.output + test.output
+    runtimeClasspath += main.output + test.output
+    groovy.srcDir file('src/testi/groovy')
+  }
+}
+
+task testi(type: Test) {
+  testClassesDir = sourceSets.testi.output.classesDir
+  classpath = sourceSets.testi.runtimeClasspath
+
+  // This is not needed, but I like to see which tests have run
+  //testLogging {
+  //  events "passed", "skipped", "failed"
+  //}
+}

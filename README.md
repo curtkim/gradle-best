@@ -1,6 +1,6 @@
 # 목적
-- groovy test
-- groovy integration test
+- groovy test (완료)
+- groovy integration test(완료)
 - subproject java
 - main project use subproject jar
 - git clone으로 실행가능
