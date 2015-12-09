@@ -38,3 +38,12 @@ task getDeps(type: Copy) {
   from sourceSets.main.runtimeClasspath
   into 'lib/'
 }
+
+//task temp() {
+//  sourceSets.main.runtimeClasspath.each {println it.class}
+//}
+
+task temp2() {
+  println project
+  println project.name
+}
